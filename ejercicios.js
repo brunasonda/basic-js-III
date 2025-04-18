@@ -146,14 +146,31 @@ console.log("My name is:", fullName);
 
 // 2. Escribe una función que tome una cadena de texto como argumento y devuelva su longitud.
 
-function names(name3, lenght) {
-  const bigName = name3.lenght ;
-  lenght = name3.lenght
-  console.log(name3, "has", name3.lenght);
-  
-  
+function length1(bbq) {
+  return bbq.length;
+}
+
+console.log("Barbecue has", length1("Barbecue"), "letters");
+
+
 // 3. Escribe una función que tome una cadena de texto como argumento y devuelva la misma cadena en mayúsculas.
+
+let star = "twinkle twinkle little star ✨";
+function twinkle(star) {
+  return star.toUpperCase(star);
+}
+console.log(twinkle(star));
+
+
 // 4. Escribe una función que tome una cadena de texto como argumento y devuelva la misma cadena en minúsculas.
+
+let song = "How I wonder what you are? ✨";
+function text(song) {
+  return song.toLowerCase(song);
+}
+console.log(text(song));
+
+
 // 5. Escribe una función que tome una cadena de texto y un índice como argumentos, y devuelva el carácter en esa posición.
 // 6. Escribe una función que tome una cadena de texto como argumento y devuelva la misma cadena invertida.
 // 7. Escribe una función que tome una cadena de texto y un carácter como argumentos, y devuelva la cantidad de veces que el carácter aparece en la cadena.
