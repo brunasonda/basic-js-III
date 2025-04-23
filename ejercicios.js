@@ -172,16 +172,91 @@ console.log(text(song));
 
 
 // 5. Escribe una función que tome una cadena de texto y un índice como argumentos, y devuelva el carácter en esa posición.
+
+
 // 6. Escribe una función que tome una cadena de texto como argumento y devuelva la misma cadena invertida.
+
+let invText = 'twinkle twinkle little star ✨';
+function invert(invText) {
+  return invText.split('').reverse().join('');
+}
+console.log(invert(invText));
+
+
 // 7. Escribe una función que tome una cadena de texto y un carácter como argumentos, y devuelva la cantidad de veces que el carácter aparece en la cadena.
+
+let letterE = "Lets find out how many times the letter E appeared";
+function countCharacter(str, char) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i].toLowerCase() === char.toLowerCase()) {
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log(letterE,":", countCharacter(letterE, 'e')); 
+
 // 8. Escribe una función que tome una cadena de texto como argumento y devuelva la misma cadena sin espacios en blanco.
+
+let spaces = "Lets get together";
+function textWSpaces(str) {
+  return str.replace(/ +/g, '');  
+}
+console.log(textWSpaces(spaces)); 
+
 // 9. Escribe una función que tome una cadena de texto como argumento y devuelva true si es un palíndromo (se lee igual de izquierda a derecha y de derecha a izquierda), o false si no lo es.
+
+function itsPalindromo(cadena) {
+  const texto = cadena.toLowerCase().replace(/\s/g, '');
+  return texto === texto.split('').reverse().join('');
+}
+console.log(itsPalindromo("reconocer"));         
+console.log(itsPalindromo("hola mundo"));  
+
 // 10. Escribe una función que tome una cadena de texto como argumento y devuelva la misma cadena con la primera letra de cada palabra en mayúscula.
 
+function capitalizeWords(text) {
+  const words = text.split(' ');  
+  for (let i = 0; i < words.length; i++) {
+    const firstLetter = words[i][0].toUpperCase();
+    const restOfWord = words[i].slice(1).toLowerCase();
+    words[i] = firstLetter + restOfWord;
+  }  
+  return words.join(' ');
+}
+console.log(capitalizeWords("hola soy un test")); 
+console.log(capitalizeWords("buenos dias")); 
 
 // ## Arrays:
 // 1. Escribe una función que tome un array de números como argumento y devuelva la suma de todos sus elementos.
+///a partir daqui sem internet
+
+const numbers = [0, 1, 2, 3, 4]; 
+function sumNumbers(arr) {
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i];
+  }
+  return total;
+}
+const total = sumNumbers(numbers);
+console.log(total); 
+
 // 2. Escribe una función que tome un array de números como argumento y devuelva el promedio de todos sus elementos.
+
+const numbers2 = [2, 4, 6];
+function calculateAverage(arr) {
+  if (arr.length === 0) return 0; 
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length; }
+const average = calculateAverage(numbers2);
+console.log(average); 
+
 // 3. Escribe una función que tome un array de números como argumento y devuelva el array ordenado de forma ascendente.
 // 4. Escribe una función que tome un array de números y un número como argumentos, y devuelva un nuevo array con los elementos mayores al número dado.
 // 5. Escribe una función que tome dos arrays como argumentos y devuelva un nuevo array con todos los elementos de ambos arrays.
